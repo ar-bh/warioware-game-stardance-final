@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d2pml7aq0q0yu"]
+
+[ext_resource type="Script" uid="uid://dj3pqg0nwnsx1" path="res://scripts/game_timer.gd" id="1_2u28t"]
+
+[node name="GameTimer" type="CanvasLayer" unique_id=188414290]
+script = ExtResource("1_2u28t")
+
+[node name="Label" type="Label" parent="." unique_id=1350567078]
+offset_left = 1032.0
+offset_top = 33.0
+offset_right = 1072.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 50
+text = "8"

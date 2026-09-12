@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cy3k5jd3j5l0x"]
 
 [ext_resource type="Texture2D" uid="uid://3cdwx6kopc2c" path="res://assets/collectible/pizzaface_00.png" id="1_2woqp"]
+[ext_resource type="Script" uid="uid://nqaydfg8ql8t" path="res://scripts/pizza.gd" id="1_ketk8"]
 [ext_resource type="Texture2D" uid="uid://owr1jlwlbles" path="res://assets/collectible/pizzaface_01.png" id="2_ketk8"]
 [ext_resource type="Texture2D" uid="uid://cyq6mwmh5m2wh" path="res://assets/collectible/pizzaface_02.png" id="3_hutbb"]
 [ext_resource type="Texture2D" uid="uid://v4eleaujc4h5" path="res://assets/collectible/pizzaface_03.png" id="4_yew0j"]
@@ -73,10 +74,17 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Pizza" type="Area2D" unique_id=575973587]
+[sub_resource type="CircleShape2D" id="CircleShape2D_taras"]
+radius = 32.0
+
+[node name="Pizza" type="Area2D" unique_id=575973587 groups=["pizza"]]
+script = ExtResource("1_ketk8")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=958553125]
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_mn11d")
-frame_progress = 0.34777987
+autoplay = "default"
+frame_progress = 0.8658106
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1730565333]
+shape = SubResource("CircleShape2D_taras")
