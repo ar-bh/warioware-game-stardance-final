@@ -1,3 +1,79 @@
 [gd_scene format=3 uid="uid://e8s5d5pv3alj"]
 
+[ext_resource type="Texture2D" uid="uid://befdlcqfqei8q" path="res://assets/map/john gutter.jpeg" id="1_tk6fs"]
+[ext_resource type="PackedScene" uid="uid://bp2wmhjkb7or4" path="res://scenes/player.tscn" id="2_og05i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tk6fs"]
+size = Vector2(1287.5, 317)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_og05i"]
+size = Vector2(1288.9001, 154.48138)
+
 [node name="Minigame1" type="Node2D" unique_id=1009957394]
+
+[node name="Background" type="TextureRect" parent="." unique_id=574176145]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0000305
+offset_top = -4.0
+offset_right = 635.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5005875, 2.496164)
+texture = ExtResource("1_tk6fs")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1755724510]
+position = Vector2(-704, -135)
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1947175002]
+offset_left = 696.0
+offset_top = 666.0
+offset_right = 736.0
+offset_bottom = 706.0
+scale = Vector2(32.21396, 8.205306)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1736859022]
+position = Vector2(1338.25, 826.49994)
+shape = SubResource("RectangleShape2D_tk6fs")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=149124189]
+position = Vector2(55, 211)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=843208650]
+offset_left = 661.0
+offset_top = -3.0
+offset_right = 701.0
+offset_bottom = 37.0
+scale = Vector2(32.21396, 8.205306)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1171817905]
+position = Vector2(1303.25, 157.49994)
+shape = SubResource("RectangleShape2D_tk6fs")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=464821376]
+position = Vector2(-914, -386)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1116573919]
+offset_left = 165.99998
+offset_top = 711.0
+offset_right = 205.99998
+offset_bottom = 751.0
+scale = Vector2(31.903925, 1.9512517)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1520246523]
+position = Vector2(805.00006, 747)
+scale = Vector2(0.982717, 0.49768594)
+shape = SubResource("RectangleShape2D_og05i")
+
+[node name="Player" parent="." unique_id=1931596592 instance=ExtResource("2_og05i")]
+position = Vector2(240, 514)
