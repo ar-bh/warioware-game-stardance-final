@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cy3k5jd3j5l0x"]
+
+[ext_resource type="Texture2D" uid="uid://3cdwx6kopc2c" path="res://assets/collectible/pizzaface_00.png" id="1_2woqp"]
+[ext_resource type="Texture2D" uid="uid://owr1jlwlbles" path="res://assets/collectible/pizzaface_01.png" id="2_ketk8"]
+[ext_resource type="Texture2D" uid="uid://cyq6mwmh5m2wh" path="res://assets/collectible/pizzaface_02.png" id="3_hutbb"]
+[ext_resource type="Texture2D" uid="uid://v4eleaujc4h5" path="res://assets/collectible/pizzaface_03.png" id="4_yew0j"]
+[ext_resource type="Texture2D" uid="uid://cim4lpnhl3c5i" path="res://assets/collectible/pizzaface_04.png" id="5_vn17c"]
+[ext_resource type="Texture2D" uid="uid://bqidqs6yqj63l" path="res://assets/collectible/pizzaface_05.png" id="6_hxhl3"]
+[ext_resource type="Texture2D" uid="uid://cm01upsdx3h6p" path="res://assets/collectible/pizzaface_06.png" id="7_2m1rl"]
+[ext_resource type="Texture2D" uid="uid://i32jaa67t3it" path="res://assets/collectible/pizzaface_07.png" id="8_qtc2u"]
+[ext_resource type="Texture2D" uid="uid://diawx0qh1ypr8" path="res://assets/collectible/pizzaface_08.png" id="9_ila8s"]
+[ext_resource type="Texture2D" uid="uid://btk0f12vovrom" path="res://assets/collectible/pizzaface_09.png" id="10_lssu7"]
+[ext_resource type="Texture2D" uid="uid://d3trlm30mpf1w" path="res://assets/collectible/pizzaface_10.png" id="11_mwmfo"]
+[ext_resource type="Texture2D" uid="uid://dwbtn12c25mss" path="res://assets/collectible/pizzaface_11.png" id="12_fv1pp"]
+[ext_resource type="Texture2D" uid="uid://dqu5odyc80ha4" path="res://assets/collectible/pizzaface_12.png" id="13_ihesl"]
+[ext_resource type="Texture2D" uid="uid://b5vjphjxp4bf0" path="res://assets/collectible/pizzaface_13.png" id="14_8nye5"]
+[ext_resource type="Texture2D" uid="uid://drj2sw57l3cj7" path="res://assets/collectible/pizzaface_14.png" id="15_svkqo"]
+[ext_resource type="Texture2D" uid="uid://cfd4tm002oe4r" path="res://assets/collectible/pizzaface_15.png" id="16_6porh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mn11d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2woqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ketk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hutbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yew0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vn17c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hxhl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2m1rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qtc2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ila8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lssu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mwmfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fv1pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ihesl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8nye5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_svkqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6porh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Pizza" type="Area2D" unique_id=575973587]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=958553125]
+sprite_frames = SubResource("SpriteFrames_mn11d")
+frame_progress = 0.34777987
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1730565333]

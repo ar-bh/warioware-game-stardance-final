@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var speed := 300.0
 @export var jump_velocity := -500.0
 
-@onready var skin: AnimatedSPrite2D = $Skin
+@onready var skin: AnimatedSprite2D = $Skin
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -23,8 +23,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		skin.play("jump")
 	elif direction:
-		animated_sprite.play("walk")
+		skin.play("walk")
 	else:
-		animated_sprite.play("idle")
+		skin.play("idle")
 	
 	move_and_slide()
