@@ -7,24 +7,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tk6fs"]
 size = Vector2(1287.5, 317)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmjug"]
+size = Vector2(1588.9519, 481.3013)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_og05i"]
-size = Vector2(1288.9001, 154.48138)
+size = Vector2(539.6387, 154.48138)
 
 [node name="Minigame1" type="Node2D" unique_id=1009957394]
 
-[node name="Background" type="TextureRect" parent="." unique_id=574176145]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -2.0000305
-offset_top = -4.0
-offset_right = 635.0
-offset_bottom = 354.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5005875, 2.496164)
+[node name="Background" type="Sprite2D" parent="." unique_id=574176145]
 texture = ExtResource("1_tk6fs")
 script = ExtResource("2_lmjug")
 
@@ -48,32 +39,33 @@ shape = SubResource("RectangleShape2D_tk6fs")
 position = Vector2(-33, 449)
 
 [node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=843208650]
-offset_left = 661.0
+offset_left = 665.0
 offset_top = -3.0
-offset_right = 701.0
+offset_right = 705.0
 offset_bottom = 37.0
-scale = Vector2(32.21396, 8.205306)
+scale = Vector2(23.729637, 10.585332)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1171817905]
-position = Vector2(1303.25, 157.49994)
-shape = SubResource("RectangleShape2D_tk6fs")
+position = Vector2(1137.2769, 201.09766)
+scale = Vector2(0.59627116, 0.84314066)
+shape = SubResource("RectangleShape2D_lmjug")
 
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=464821376]
 position = Vector2(-914, -386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1116573919]
-offset_left = 165.99998
-offset_top = 711.0
-offset_right = 205.99998
-offset_bottom = 751.0
-scale = Vector2(31.903925, 1.9512517)
+offset_left = 909.0
+offset_top = 707.0
+offset_right = 949.0
+offset_bottom = 747.0
+scale = Vector2(13.11819, 1.8810269)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1520246523]
-position = Vector2(805.00006, 747)
+position = Vector2(1173.156, 747)
 scale = Vector2(0.982717, 0.49768594)
 shape = SubResource("RectangleShape2D_og05i")
 
