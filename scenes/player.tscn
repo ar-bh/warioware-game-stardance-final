@@ -62,7 +62,7 @@ scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_pepp")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.48456874
+frame_progress = 0.25501886
 offset = Vector2(0, -50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278616842]
@@ -70,3 +70,9 @@ position = Vector2(0, -34)
 shape = SubResource("CapsuleShape2D_mn11d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=393182311]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.25
+drag_bottom_margin = 0.25
