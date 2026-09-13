@@ -4,8 +4,15 @@
 [ext_resource type="Script" uid="uid://hbo5ayxf85yg" path="res://scripts/background.gd" id="2_lmjug"]
 [ext_resource type="PackedScene" uid="uid://bp2wmhjkb7or4" path="res://scenes/player.tscn" id="2_og05i"]
 [ext_resource type="TileSet" uid="uid://d02yeccl4agcb" path="res://assets/map/john_gutter_tileset.tres" id="3_tiles"]
+[ext_resource type="Script" uid="uid://bnnlor47nrq7v" path="res://scripts/minigame_1.gd" id="4_mg"]
+[ext_resource type="PackedScene" uid="uid://cy3k5jd3j5l0x" path="res://scenes/pizza.tscn" id="5_pizza"]
+[ext_resource type="PackedScene" uid="uid://d2pml7aq0q0yu" path="res://scenes/game_timer.tscn" id="6_timer"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kill"]
+size = Vector2(2400, 200)
 
 [node name="Minigame1" type="Node2D" unique_id=1009957394]
+script = ExtResource("4_mg")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=574176145]
 texture = ExtResource("1_tk6fs")
@@ -19,3 +26,54 @@ tile_set = ExtResource("3_tiles")
 
 [node name="Player" parent="." unique_id=1931596592 instance=ExtResource("2_og05i")]
 position = Vector2(258, 502)
+
+[node name="Pizza" parent="." unique_id=575973587 instance=ExtResource("5_pizza")]
+position = Vector2(375, 207)
+
+[node name="Pizza2" parent="." unique_id=989782641 instance=ExtResource("5_pizza")]
+position = Vector2(1166, 328)
+
+[node name="Pizza3" parent="." unique_id=1573531691 instance=ExtResource("5_pizza")]
+position = Vector2(700, 402)
+
+[node name="GameTimer" parent="." unique_id=188414290 instance=ExtResource("6_timer")]
+seconds = 10.0
+
+[node name="Prompt" type="Label" parent="GameTimer" unique_id=753827968]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_shadow_color = Color(0.62, 0.14, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "get 3 pizza faces"
+horizontal_alignment = 1
+
+[node name="Lives" type="Label" parent="GameTimer" unique_id=753827969]
+unique_name_in_owner = true
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "x3"
+
+[node name="Kill" type="Area2D" parent="." unique_id=753827970]
+position = Vector2(784, 960)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill" unique_id=753827971]
+shape = SubResource("RectangleShape2D_kill")

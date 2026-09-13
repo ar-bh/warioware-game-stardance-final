@@ -30,7 +30,7 @@ func lose_life() -> void:
 		go_level()
 
 func win_minigame() -> void:
-	current_minigame != 1
+	current_minigame += 1
 	if current_minigame > TOTAL_MINIGAMES:
 		get_tree().change_scene_to_file("res://scenes/win.tscn")
 	else:
