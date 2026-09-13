@@ -17,6 +17,7 @@ const PROMPTS := [
 	"get 3 pizza faces",
 	"click 5 toppings",
 	"get 3 pizza faces",
+	"click 5 toppings"
 ]
 const TITLE := "res://scenes/title.tscn"
 const LEVEL := "res://scenes/level.tscn"

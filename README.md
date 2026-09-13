@@ -2,10 +2,11 @@
 
 a Pizza tower inspired micro game rush thing where you grab pizza faces, click toppings and try not to die
 
-## Play
-- [itch.io link]
-- you can open this project in Godot 4.7.1 and play
+![screenshot](screenshot.png)
 
+## Play
+- [itch.io link]()
+- you can open this project in Godot 4.7.1 and play but it's a lot more work
 ## Controls
 - move sideways using A/D or left and right arrow
 - jump using space or up arrow
