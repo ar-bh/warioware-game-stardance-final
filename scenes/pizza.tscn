@@ -84,7 +84,7 @@ script = ExtResource("1_ketk8")
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_mn11d")
 autoplay = "default"
-frame_progress = 0.8658106
+frame_progress = 0.3798447
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1730565333]
 shape = SubResource("CircleShape2D_taras")

@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dr4sysl22n10j"]
+
+[ext_resource type="Script" uid="uid://cc3aiy3ej50yt" path="res://scripts/title.gd" id="1_4ignj"]
+[ext_resource type="Theme" uid="uid://bq4tm0a1agknq" path="res://assets/ui/menu_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" uid="uid://c0tafynhk5vwu" path="res://assets/player/peppino_idle.png" id="3_p6dhs"]
+
+[node name="Title" type="Control" unique_id=408522492]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_4ignj")
+
+[node name="Fill" type="ColorRect" parent="." unique_id=1259247980]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.27058825, 0.1764706, 0.31764707, 1)
+
+[node name="Safe" type="Control" parent="." unique_id=2100000010]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="ColorRect" parent="Safe" unique_id=2100000001]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 18.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.78, 0.16, 0.22, 1)
+
+[node name="BottomBar" type="ColorRect" parent="Safe" unique_id=2100000002]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(1, 0.82, 0.18, 1)
+
+[node name="Peppino" type="TextureRect" parent="Safe" unique_id=981287988]
+texture_filter = 1
+custom_minimum_size = Vector2(260, 260)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = -300.0
+offset_right = 296.0
+offset_bottom = -28.0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_p6dhs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Safe" unique_id=178590760]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -200.0
+offset_right = 500.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="Banner" type="Label" parent="Safe/VBoxContainer" unique_id=1109078590]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "PIZZA TOWER WARE"
+horizontal_alignment = 1
+
+[node name="Tag" type="Label" parent="Safe/VBoxContainer" unique_id=2100000003]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.93, 0.78, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "made by arjun hooray for stardance challenge"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Safe/VBoxContainer" unique_id=465594006]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 76)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PLAY"
+
+[node name="Hint" type="Label" parent="Safe/VBoxContainer" unique_id=2100000004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93, 0.78, 1, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 18
+text = "click it now yes yes yes"
+horizontal_alignment = 1
