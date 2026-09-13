@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dqx6nvwprsuvb"]
+
+[ext_resource type="Script" uid="uid://d13idpvel0dlf" path="res://scripts/topping.gd" id="1_jabnp"]
+[ext_resource type="Texture2D" uid="uid://uhxjx55ovh65" path="res://assets/collectible/toppings/mushroom.png" id="1_tex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hit"]
+size = Vector2(100, 120)
+
+[node name="Topping" type="Area2D" unique_id=1541555117 groups=["topping"]]
+script = ExtResource("1_jabnp")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1541555118]
+texture_filter = 1
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1541555119]
+shape = SubResource("RectangleShape2D_hit")

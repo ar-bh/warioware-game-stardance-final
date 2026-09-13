@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bq4tm0a1agknq" path="res://assets/ui/menu_theme.tres" id="1_theme"]
 [ext_resource type="Script" uid="uid://ca4deef8gxih0" path="res://scripts/level.gd" id="2_w7c3h"]
+[ext_resource type="Texture2D" uid="uid://v08qi6q3bsg6" path="res://assets/map/gameplay.jpg" id="3_w8frs"]
 
 [node name="Level" type="Control" unique_id=167717485]
 layout_mode = 3
@@ -13,7 +14,7 @@ grow_vertical = 2
 theme = ExtResource("1_theme")
 script = ExtResource("2_w7c3h")
 
-[node name="Fill" type="ColorRect" parent="." unique_id=2063814464]
+[node name="Fill" type="TextureRect" parent="." unique_id=1000047589]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +22,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.27058825, 0.1764706, 0.31764707, 1)
+texture = ExtResource("3_w8frs")
+expand_mode = 1
 
 [node name="Safe" type="Control" parent="." unique_id=2112491174]
 layout_mode = 1

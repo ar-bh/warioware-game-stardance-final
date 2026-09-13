@@ -1,0 +1,81 @@
+[gd_scene format=4]
+
+[ext_resource type="Texture2D" uid="uid://be4gt374j12u5" path="res://assets/map/3dtower.jpeg" id="1_bg"]
+[ext_resource type="Script" uid="uid://hbo5ayxf85yg" path="res://scripts/background.gd" id="2_bg"]
+[ext_resource type="PackedScene" uid="uid://bp2wmhjkb7or4" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="TileSet" uid="uid://d02yeccl4agcb" path="res://assets/map/john_gutter_tileset.tres" id="4_tiles"]
+[ext_resource type="Script" uid="uid://bnnlor47nrq7v" path="res://scripts/minigame_1.gd" id="5_mg"]
+[ext_resource type="PackedScene" uid="uid://cy3k5jd3j5l0x" path="res://scenes/pizza.tscn" id="6_pizza"]
+[ext_resource type="PackedScene" uid="uid://d2pml7aq0q0yu" path="res://scenes/game_timer.tscn" id="7_timer"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kill"]
+size = Vector2(2400, 200)
+
+[node name="Minigame3" type="Node2D"]
+script = ExtResource("5_mg")
+cam_right = 1344
+cam_bottom = 736
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_bg")
+script = ExtResource("2_bg")
+amount = 0.06
+
+[node name="Tiles" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAhAAwAAAABAAAAAAAiAAwAAAACAAAAAAAjAAwAAAACAAAAAAAkAAwAAAACAAAAAAAlAAwAAAACAAAAAAAmAAwAAAACAAAAAAAnAAwAAAACAAAAAAAoAAwAAAACAAAAAAApAAwAAAADAAAAAAAhAA0AAAABAAEAAAAiAA0AAAACAAEAAAAjAA0AAAACAAEAAAAkAA0AAAACAAEAAAAlAA0AAAACAAEAAAAmAA0AAAACAAEAAAAnAA0AAAACAAEAAAAoAA0AAAACAAEAAAApAA0AAAADAAEAAAAYAA4AAAABAAAAAAAZAA4AAAACAAAAAAAaAA4AAAACAAAAAAAbAA4AAAACAAAAAAAcAA4AAAACAAAAAAAdAA4AAAACAAAAAAAeAA4AAAACAAAAAAAfAA4AAAADAAAAAAAhAA4AAAABAAIAAAAiAA4AAAACAAIAAAAjAA4AAAACAAIAAAAkAA4AAAACAAIAAAAlAA4AAAACAAIAAAAmAA4AAAACAAIAAAAnAA4AAAACAAIAAAAoAA4AAAACAAIAAAApAA4AAAADAAIAAAAYAA8AAAABAAEAAAAZAA8AAAACAAEAAAAaAA8AAAACAAEAAAAbAA8AAAACAAEAAAAcAA8AAAACAAEAAAAdAA8AAAACAAEAAAAeAA8AAAACAAEAAAAfAA8AAAADAAEAAAANABAAAAABAAAAAAAOABAAAAACAAAAAAAPABAAAAACAAAAAAAQABAAAAACAAAAAAARABAAAAACAAAAAAASABAAAAACAAAAAAATABAAAAACAAAAAAAUABAAAAACAAAAAAAVABAAAAADAAAAAAAYABAAAAABAAIAAAAZABAAAAACAAIAAAAaABAAAAACAAIAAAAbABAAAAACAAIAAAAcABAAAAACAAIAAAAdABAAAAACAAIAAAAeABAAAAACAAIAAAAfABAAAAADAAIAAAANABEAAAABAAEAAAAOABEAAAACAAEAAAAPABEAAAACAAEAAAAQABEAAAACAAEAAAARABEAAAACAAEAAAASABEAAAACAAEAAAATABEAAAACAAEAAAAUABEAAAACAAEAAAAVABEAAAADAAEAAAAAABIAAAABAAAAAAABABIAAAACAAAAAAACABIAAAACAAAAAAADABIAAAACAAAAAAAEABIAAAACAAAAAAAFABIAAAACAAAAAAAGABIAAAACAAAAAAAHABIAAAACAAAAAAAIABIAAAACAAAAAAAJABIAAAACAAAAAAAKABIAAAADAAAAAAANABIAAAABAAEAAAAOABIAAAACAAEAAAAPABIAAAACAAEAAAAQABIAAAACAAEAAAARABIAAAACAAEAAAASABIAAAACAAEAAAATABIAAAACAAEAAAAUABIAAAACAAEAAAAVABIAAAADAAEAAAAAABMAAAABAAEAAAABABMAAAACAAEAAAACABMAAAACAAEAAAADABMAAAACAAEAAAAEABMAAAACAAEAAAAFABMAAAACAAEAAAAGABMAAAACAAEAAAAHABMAAAACAAEAAAAIABMAAAACAAEAAAAJABMAAAACAAEAAAAKABMAAAADAAEAAAANABMAAAABAAEAAAAOABMAAAACAAEAAAAPABMAAAACAAEAAAAQABMAAAACAAEAAAARABMAAAACAAEAAAASABMAAAACAAEAAAATABMAAAACAAEAAAAUABMAAAACAAEAAAAVABMAAAADAAEAAAAAABQAAAABAAEAAAABABQAAAACAAEAAAACABQAAAACAAEAAAADABQAAAACAAEAAAAEABQAAAACAAEAAAAFABQAAAACAAEAAAAGABQAAAACAAEAAAAHABQAAAACAAEAAAAIABQAAAACAAEAAAAJABQAAAACAAEAAAAKABQAAAADAAEAAAANABQAAAABAAIAAAAOABQAAAACAAIAAAAPABQAAAACAAIAAAAQABQAAAACAAIAAAARABQAAAACAAIAAAASABQAAAACAAIAAAATABQAAAACAAIAAAAUABQAAAACAAIAAAAVABQAAAADAAIAAAAAABUAAAABAAEAAAABABUAAAACAAEAAAACABUAAAACAAEAAAADABUAAAACAAEAAAAEABUAAAACAAEAAAAFABUAAAACAAEAAAAGABUAAAACAAEAAAAHABUAAAACAAEAAAAIABUAAAACAAEAAAAJABUAAAACAAEAAAAKABUAAAADAAEAAAAAABYAAAABAAIAAAABABYAAAACAAIAAAACABYAAAACAAIAAAADABYAAAACAAIAAAAEABYAAAACAAIAAAAFABYAAAACAAIAAAAGABYAAAACAAIAAAAHABYAAAACAAIAAAAIABYAAAACAAIAAAAJABYAAAACAAIAAAAKABYAAAADAAIAAAA=")
+tile_set = ExtResource("4_tiles")
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+position = Vector2(176, 576)
+
+[node name="Pizza" parent="." instance=ExtResource("6_pizza")]
+position = Vector2(272, 548)
+
+[node name="Pizza2" parent="." instance=ExtResource("6_pizza")]
+position = Vector2(560, 484)
+
+[node name="Pizza3" parent="." instance=ExtResource("6_pizza")]
+position = Vector2(1200, 356)
+
+[node name="GameTimer" parent="." instance=ExtResource("7_timer")]
+seconds = 10.0
+
+[node name="Prompt" type="Label" parent="GameTimer"]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_shadow_color = Color(0.62, 0.14, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "GRAB 3"
+horizontal_alignment = 1
+
+[node name="Lives" type="Label" parent="GameTimer"]
+unique_name_in_owner = true
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "x3"
+
+[node name="Kill" type="Area2D" parent="."]
+position = Vector2(672, 900)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill"]
+shape = SubResource("RectangleShape2D_kill")

@@ -5,6 +5,9 @@ const NEED := 3
 var grabbed := 0
 var ended := false
 
+@export var cam_right := 1568
+@export var cam_bottom := 864
+
 @onready var timer: CanvasLayer = $GameTimer
 @onready var prompt: Label = %Prompt
 @onready var lives: Label = %Lives
@@ -17,8 +20,8 @@ func _ready() -> void:
 	var cam: Camera2D = $Player/Camera2D
 	cam.limit_left = 0
 	cam.limit_top = 0
-	cam.limit_right = 1568
-	cam.limit_bottom = 864
+	cam.limit_right = cam_right
+	cam.limit_bottom = cam_bottom
 	for pizza in get_tree().get_nodes_in_group("pizza"):
 		pizza.collected.connect(_on_pizza)
 	

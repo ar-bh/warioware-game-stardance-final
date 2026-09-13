@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 	if not _running:
 		return
 	seconds -= delta
-	label.text = str(ceili(maxf(seconds+1, 0.0)))
+	label.text = str(ceili(maxf(seconds, 0.0)))
 	if seconds <= 0.0:
 		_running = false
 		timed_out.emit()

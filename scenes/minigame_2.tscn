@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ei126c4iijnk"]
+
+[ext_resource type="Texture2D" uid="uid://be4gt374j12u5" path="res://assets/map/3dtower.jpeg" id="1_ju4f3"]
+[ext_resource type="Script" uid="uid://b6py34oc8nrmb" path="res://scripts/minigame_2.gd" id="1_uiylj"]
+[ext_resource type="PackedScene" uid="uid://d2pml7aq0q0yu" path="res://scenes/game_timer.tscn" id="2_timer"]
+
+[node name="Minigame2" type="Node2D" unique_id=2088776784]
+script = ExtResource("1_uiylj")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2021951034]
+texture_filter = 1
+position = Vector2(537, 508.00003)
+scale = Vector2(3.3876953, 3.5664063)
+texture = ExtResource("1_ju4f3")
+
+[node name="Toppings" type="Node2D" parent="." unique_id=473824029]
+
+[node name="GameTimer" parent="." unique_id=1994977860 instance=ExtResource("2_timer")]
+seconds = 8.0
+
+[node name="Prompt" type="Label" parent="GameTimer" unique_id=639545150]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_shadow_color = Color(0.62, 0.14, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "CLICK 5"
+horizontal_alignment = 1
+
+[node name="Lives" type="Label" parent="GameTimer" unique_id=1525417361]
+unique_name_in_owner = true
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "x3"
