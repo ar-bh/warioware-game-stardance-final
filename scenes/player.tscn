@@ -108,6 +108,34 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("22_hax0n")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w4")
+}],
+"loop": 1,
+"name": &"old_walk",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_hax0n")
 }, {
 "duration": 1.0,
 "texture": ExtResource("23_t4otl")
@@ -141,27 +169,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_w0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_w1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_w2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_w3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_w4")
-}],
-"loop": 1,
-"name": &"walk2",
-"speed": 10.0
+"speed": 20.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn11d"]
@@ -179,7 +187,6 @@ scale = Vector2(0.8788632, 0.8788632)
 sprite_frames = SubResource("SpriteFrames_pepp")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.48424098
 offset = Vector2(0, -50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278616842]

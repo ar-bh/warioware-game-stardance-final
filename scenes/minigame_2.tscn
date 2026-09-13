@@ -16,17 +16,16 @@ texture = ExtResource("1_ju4f3")
 [node name="Toppings" type="Node2D" parent="." unique_id=473824029]
 
 [node name="GameTimer" parent="." unique_id=1994977860 instance=ExtResource("2_timer")]
-seconds = 8.0
 
 [node name="Prompt" type="Label" parent="GameTimer" unique_id=639545150]
 unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -300.0
-offset_top = 20.0
-offset_right = 300.0
-offset_bottom = 92.0
+offset_left = -458.0
+offset_top = 29.0
+offset_right = 142.0
+offset_bottom = 101.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
 theme_override_colors/font_shadow_color = Color(0.62, 0.14, 0.2, 1)
