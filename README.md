@@ -25,7 +25,7 @@ between each one there's a countdown so you can actually read the prompt
 ## controls
 
 - move sideways using A/D or left and right arrow
-- jump using space or up arrow
+- jump using space or up arrow, hold it down for longer jumps
 - click toppings with mouse
 - move on with ui using space or click
 
