@@ -41,4 +41,4 @@ func _center_on_view() -> void:
 func _process(delta: float) -> void:
 	var target := home - Vector2((player.global_position.x - origin.x) * amount, 0.0)
 	current = current.lerp(target, 1.0 - exp(-smoothness * delta))
-	position = Vector2(current.x, home.y)
+	position = current

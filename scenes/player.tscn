@@ -48,8 +48,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn11d"]
-radius = 24.0
-height = 66.0
+radius = 23.815
+height = 47.63
 
 [node name="Player" type="CharacterBody2D" unique_id=1931596592]
 texture_filter = 1
@@ -66,7 +66,7 @@ frame_progress = 0.25501886
 offset = Vector2(0, -50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278616842]
-position = Vector2(0, -34)
+position = Vector2(0, -26)
 shape = SubResource("CapsuleShape2D_mn11d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=393182311]

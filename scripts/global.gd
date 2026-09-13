@@ -8,12 +8,15 @@ const GAMES := [
 	"res://scenes/minigame_2.tscn",
 	"res://scenes/minigame_3.tscn",
 	"res://scenes/minigame_2.tscn",
+	"res://scenes/minigame_4.tscn",
+	"res://scenes/minigame_2.tscn",
 ]
 const PROMPTS := [
-	"GRAB 3",
-	"CLICK 5",
-	"GRAB 3",
-	"CLICK 5",
+	"get 3 pizza faces",
+	"click 5 toppings",
+	"get 3 pizza faces",
+	"click 5 toppings",
+	"get 3 pizza faces",
 ]
 const TITLE := "res://scenes/title.tscn"
 const LEVEL := "res://scenes/level.tscn"

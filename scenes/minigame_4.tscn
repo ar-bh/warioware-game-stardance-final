@@ -1,0 +1,82 @@
+[gd_scene format=4 uid="uid://cbwfn7v7xkkvr"]
+
+[ext_resource type="Script" uid="uid://bnnlor47nrq7v" path="res://scripts/minigame_1.gd" id="1_88pdw"]
+[ext_resource type="Texture2D" uid="uid://befdlcqfqei8q" path="res://assets/map/john gutter.jpeg" id="2_kd6k2"]
+[ext_resource type="Script" uid="uid://hbo5ayxf85yg" path="res://scripts/background.gd" id="3_54wnc"]
+[ext_resource type="TileSet" uid="uid://d02yeccl4agcb" path="res://assets/map/john_gutter_tileset.tres" id="4_bqplk"]
+[ext_resource type="PackedScene" uid="uid://bp2wmhjkb7or4" path="res://scenes/player.tscn" id="5_drpx1"]
+[ext_resource type="PackedScene" uid="uid://cy3k5jd3j5l0x" path="res://scenes/pizza.tscn" id="6_k2jsj"]
+[ext_resource type="PackedScene" uid="uid://d2pml7aq0q0yu" path="res://scenes/game_timer.tscn" id="7_1n403"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kill"]
+size = Vector2(2400, 200)
+
+[node name="Minigame3" type="Node2D" unique_id=1598681923]
+script = ExtResource("1_88pdw")
+cam_right = 1344
+cam_bottom = 736
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1826883651]
+texture = ExtResource("2_kd6k2")
+script = ExtResource("3_54wnc")
+amount = 0.06
+
+[node name="Tiles" type="TileMapLayer" parent="." unique_id=1037692139]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAADABIAAAABABMAAAADABMAAAABABQAAAAEABIAAAACABMAAAAEABMAAAACABQAAAAFABIAAAADABMAAAAFABMAAAADABQAAAAGABIAAAAEABMAAAAGABMAAAAEABQAAAAHABIAAAAFABMAAAAHABMAAAAFABQAAAAIABIAAAAGABMAAAAIABMAAAAGABQAAAAJABIAAAAHABMAAAAJABMAAAAHABQAAAAMAA8AAAAXAAcAAAAMABAAAAAXAAgAAAAMABEAAAAXAAkAAAAMABIAAAAXAAoAAAAMABMAAAAXAAsAAAANAA8AAAAYAAcAAAANABAAAAAYAAgAAAANABEAAAAYAAkAAAANABIAAAAYAAoAAAANABMAAAAYAAsAAAANABQAAAAYAAwAAAAOAA8AAAAZAAcAAAAOABAAAAAZAAgAAAAOABEAAAAZAAkAAAAOABIAAAAZAAoAAAAOABMAAAAZAAsAAAAOABQAAAAZAAwAAAAPAA8AAAAaAAcAAAAPABAAAAAaAAgAAAAPABEAAAAaAAkAAAAPABIAAAAaAAoAAAAPABMAAAAaAAsAAAAPABQAAAAaAAwAAAAQAA8AAAAbAAcAAAAQABAAAAAbAAgAAAAQABEAAAAbAAkAAAAQABIAAAAbAAoAAAAQABMAAAAbAAsAAAAQABQAAAAbAAwAAAARAA8AAAAcAAcAAAARABAAAAAcAAgAAAARABEAAAAcAAkAAAARABIAAAAcAAoAAAARABMAAAAcAAsAAAARABQAAAAcAAwAAAASAA8AAAAdAAcAAAASABAAAAAdAAgAAAASABEAAAAdAAkAAAASABIAAAAdAAoAAAASABMAAAAdAAsAAAASABQAAAAdAAwAAAATAA8AAAAeAAcAAAATABAAAAAeAAgAAAATABEAAAAeAAkAAAATABIAAAAeAAoAAAATABMAAAAeAAsAAAATABQAAAAeAAwAAAAUAA8AAAAfAAcAAAAUABAAAAAfAAgAAAAUABEAAAAfAAkAAAAUABIAAAAfAAoAAAAUABMAAAAfAAsAAAAUABQAAAAfAAwAAAAVAA8AAAAgAAcAAAAVABAAAAAgAAgAAAAVABEAAAAgAAkAAAAVABIAAAAgAAoAAAAVABMAAAAgAAsAAAAVABQAAAAgAAwAAAAIAA0AAAABAAAAAAAIAA4AAAABAAEAAAAIAA8AAAABAAIAAAAJAA0AAAACAAAAAAAJAA4AAAACAAEAAAAJAA8AAAACAAIAAAAKAA0AAAADAAAAAAAKAA4AAAADAAEAAAAKAA8AAAADAAIAAAADAAoAAAABAAAAAAADAAsAAAABAAEAAAADAAwAAAABAAIAAAAEAAoAAAACAAAAAAAEAAsAAAACAAEAAAAEAAwAAAACAAIAAAAFAAoAAAADAAAAAAAFAAsAAAADAAEAAAAFAAwAAAADAAIAAAAIAAcAAAABAAAAAAAIAAgAAAABAAEAAAAIAAkAAAABAAIAAAAJAAcAAAACAAAAAAAJAAgAAAACAAEAAAAJAAkAAAACAAIAAAAKAAcAAAADAAAAAAAKAAgAAAADAAEAAAAKAAkAAAADAAIAAAADAAMAAAABAAAAAAADAAQAAAABAAEAAAADAAUAAAABAAIAAAAEAAMAAAACAAAAAAAEAAQAAAACAAEAAAAEAAUAAAACAAIAAAAFAAMAAAADAAAAAAAFAAQAAAADAAEAAAAFAAUAAAADAAIAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAIAAAAJAAAAAAACAAAAAAAJAAEAAAACAAEAAAAJAAIAAAACAAIAAAAKAAAAAAADAAAAAAAKAAEAAAADAAEAAAAKAAIAAAADAAIAAAAKABIAAAAIABMAAAAKABMAAAAIABQAAAACABEAAAAAABIAAAACABIAAAAAABMAAAALABEAAAAJABIAAAALABIAAAAJABMAAAA=")
+tile_set = ExtResource("4_bqplk")
+
+[node name="Player" parent="." unique_id=308841320 instance=ExtResource("5_drpx1")]
+position = Vector2(176, 576)
+
+[node name="Pizza" parent="." unique_id=1416718566 instance=ExtResource("6_k2jsj")]
+position = Vector2(272, 548)
+
+[node name="Pizza2" parent="." unique_id=1190764272 instance=ExtResource("6_k2jsj")]
+position = Vector2(416, 363)
+
+[node name="Pizza3" parent="." unique_id=1384880947 instance=ExtResource("6_k2jsj")]
+position = Vector2(138, 48)
+
+[node name="GameTimer" parent="." unique_id=755959456 instance=ExtResource("7_1n403")]
+seconds = 12.0
+
+[node name="Prompt" type="Label" parent="GameTimer" unique_id=1374940307]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_shadow_color = Color(0.62, 0.14, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "GRAB 3"
+horizontal_alignment = 1
+
+[node name="Lives" type="Label" parent="GameTimer" unique_id=2017095317]
+unique_name_in_owner = true
+offset_left = 36.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 88.0
+scale = Vector2(1, 1.0285716)
+theme_override_colors/font_color = Color(1, 0.86, 0.16, 1)
+theme_override_colors/font_outline_color = Color(0.18, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "x3"
+
+[node name="Kill" type="Area2D" parent="." unique_id=1530517474]
+position = Vector2(672, 900)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill" unique_id=222314561]
+shape = SubResource("RectangleShape2D_kill")
